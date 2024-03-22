@@ -1,6 +1,7 @@
 const fetch = require("node-fetch").default;
 const Constants = require("./Constants/Constants");
-const randomID = () => Math.floor(Math.random() * (Constants.POKEMON_MAX - 1 + 1) + 1);
+const { randomInt } = require("node:crypto");
+const randomID = () => randomInt(1, Constants.POKEMON_MAX);
 const Pokemon = require("./Structures/Pokemon");
 
 /**
